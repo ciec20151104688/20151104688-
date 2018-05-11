@@ -11,9 +11,34 @@ namespace _20151104688刘宇轩
 {
     public partial class FreedomCarEnter : Form
     {
+        TimeSpan TimeCount = new TimeSpan();
+        System.DateTime TimeNow = new DateTime();
         public FreedomCarEnter()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer.Start();
+            TimeNow = DateTime.Now;
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            TimeCount = DateTime.Now - TimeNow;
+            timeshow.Text = string.Format("{0:00}:{1:00}:{2:00}", TimeCount.Hours, TimeCount.Minutes, TimeCount.Seconds);
+        }
+
+        private void timestop_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            pictureBox1.Visible = true;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

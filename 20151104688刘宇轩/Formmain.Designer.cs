@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("张三");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("李四");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("王五");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("赵7");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("张三");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("李四");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("王五");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("赵7");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode16,
+            treeNode17});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -53,13 +53,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.photo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button_leave = new System.Windows.Forms.Button();
-            this.button_enter = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -76,14 +69,24 @@
             this.text_admin_password = new System.Windows.Forms.TextBox();
             this.text_admin_password2 = new System.Windows.Forms.TextBox();
             this.button_save = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button_enter = new System.Windows.Forms.Button();
+            this.button_leave = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -123,21 +126,21 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 123);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "zhangsan";
-            treeNode1.Text = "张三";
-            treeNode2.Name = "lisi";
-            treeNode2.Text = "李四";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "一层业主";
-            treeNode4.Name = "wangwu";
-            treeNode4.Text = "王五";
-            treeNode5.Name = "zhaoqi";
-            treeNode5.Text = "赵7";
-            treeNode6.Name = "节点4";
-            treeNode6.Text = "二层业主";
+            treeNode13.Name = "zhangsan";
+            treeNode13.Text = "张三";
+            treeNode14.Name = "lisi";
+            treeNode14.Text = "李四";
+            treeNode15.Name = "节点0";
+            treeNode15.Text = "一层业主";
+            treeNode16.Name = "wangwu";
+            treeNode16.Text = "王五";
+            treeNode17.Name = "zhaoqi";
+            treeNode17.Text = "赵7";
+            treeNode18.Name = "节点4";
+            treeNode18.Text = "二层业主";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode6});
+            treeNode15,
+            treeNode18});
             this.treeView1.Size = new System.Drawing.Size(121, 112);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
@@ -249,77 +252,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "照片信息";
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(2, 4);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(937, 464);
-            this.tabControl1.TabIndex = 3;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(929, 435);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "车辆管理";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.button_leave);
-            this.groupBox3.Controls.Add(this.button_enter);
-            this.groupBox3.Location = new System.Drawing.Point(6, 7);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(148, 100);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "进出管理";
-            // 
-            // button_leave
-            // 
-            this.button_leave.Location = new System.Drawing.Point(10, 58);
-            this.button_leave.Name = "button_leave";
-            this.button_leave.Size = new System.Drawing.Size(75, 23);
-            this.button_leave.TabIndex = 1;
-            this.button_leave.Text = "离开";
-            this.button_leave.UseVisualStyleBackColor = true;
-            // 
-            // button_enter
-            // 
-            this.button_enter.Location = new System.Drawing.Point(10, 25);
-            this.button_enter.Name = "button_enter";
-            this.button_enter.Size = new System.Drawing.Size(75, 23);
-            this.button_enter.TabIndex = 0;
-            this.button_enter.Text = "进入";
-            this.button_enter.UseVisualStyleBackColor = true;
-            this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(929, 435);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "收费记录";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(929, 435);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.groupBox4);
@@ -421,7 +353,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(74, 220);
+            this.button1.Location = new System.Drawing.Point(66, 220);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 8;
@@ -472,6 +404,107 @@
             this.button_save.UseVisualStyleBackColor = true;
             this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(929, 435);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "停车场状态";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(929, 435);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "收费记录";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.label18);
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(929, 435);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "车辆管理";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button_leave);
+            this.groupBox3.Controls.Add(this.button_enter);
+            this.groupBox3.Location = new System.Drawing.Point(361, 15);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(148, 95);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "进出管理";
+            // 
+            // button_enter
+            // 
+            this.button_enter.Location = new System.Drawing.Point(10, 25);
+            this.button_enter.Name = "button_enter";
+            this.button_enter.Size = new System.Drawing.Size(75, 23);
+            this.button_enter.TabIndex = 0;
+            this.button_enter.Text = "进入";
+            this.button_enter.UseVisualStyleBackColor = true;
+            this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
+            // 
+            // button_leave
+            // 
+            this.button_leave.Location = new System.Drawing.Point(10, 58);
+            this.button_leave.Name = "button_leave";
+            this.button_leave.Size = new System.Drawing.Size(75, 23);
+            this.button_leave.TabIndex = 1;
+            this.button_leave.Text = "离开";
+            this.button_leave.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(2, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(937, 464);
+            this.tabControl1.TabIndex = 3;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Location = new System.Drawing.Point(0, 3);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(343, 288);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "停车场状态";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 319);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 15);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "剩余车位：";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(166, 319);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 15);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "label19";
+            // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -489,12 +522,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -516,28 +550,31 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button_leave;
-        private System.Windows.Forms.Button button_enter;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.TextBox text_admin_password2;
+        private System.Windows.Forms.TextBox text_admin_password;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox text_admin_tel;
         private System.Windows.Forms.TextBox text_admin_age;
         private System.Windows.Forms.TextBox text_admin_id;
         private System.Windows.Forms.TextBox text_admin_name;
-        private System.Windows.Forms.TextBox text_admin_password;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox text_admin_password2;
-        private System.Windows.Forms.Button button_save;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button_leave;
+        private System.Windows.Forms.Button button_enter;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

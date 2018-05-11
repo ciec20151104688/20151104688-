@@ -133,6 +133,7 @@ namespace _20151104688刘宇轩
         {
             FreedomCarEnter freecarEnter = new FreedomCarEnter();
             freecarEnter.Show();
+
         }
 
         private void label12_Click(object sender, EventArgs e)

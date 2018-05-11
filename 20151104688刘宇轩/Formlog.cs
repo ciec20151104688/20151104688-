@@ -6,14 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
 namespace _20151104688刘宇轩
 {
     public partial class Formlog : Form
     {
+        public static Formlog pmain;
         public Formlog()
         {
             InitializeComponent();
+            pmain = this;
         }
 
         private void Form1_Load(object sender, EventArgs e)
