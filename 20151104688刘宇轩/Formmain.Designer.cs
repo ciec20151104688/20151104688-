@@ -53,30 +53,50 @@
             this.label3 = new System.Windows.Forms.Label();
             this.photo = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.用户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.自由车辆登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.固定车辆登记ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.信息查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.业主信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button_leave = new System.Windows.Forms.Button();
+            this.button_enter = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.text_admin_name = new System.Windows.Forms.TextBox();
+            this.text_admin_id = new System.Windows.Forms.TextBox();
+            this.text_admin_age = new System.Windows.Forms.TextBox();
+            this.text_admin_tel = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.text_admin_password = new System.Windows.Forms.TextBox();
+            this.text_admin_password2 = new System.Windows.Forms.TextBox();
+            this.button_save = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
+            this.groupBox1.Location = new System.Drawing.Point(12, 474);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(277, 49);
+            this.groupBox1.Size = new System.Drawing.Size(277, 55);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "系统状态";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label11
             // 
@@ -92,7 +112,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(0, 21);
+            this.label1.Location = new System.Drawing.Point(6, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 19);
             this.label1.TabIndex = 0;
@@ -229,77 +249,238 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "照片信息";
             // 
-            // menuStrip1
+            // tabControl1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.用户ToolStripMenuItem,
-            this.信息查询ToolStripMenuItem,
-            this.系统管理ToolStripMenuItem,
-            this.退出ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(682, 28);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(2, 4);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(937, 464);
+            this.tabControl1.TabIndex = 3;
             // 
-            // 用户ToolStripMenuItem
+            // tabPage2
             // 
-            this.用户ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.自由车辆登记ToolStripMenuItem,
-            this.固定车辆登记ToolStripMenuItem});
-            this.用户ToolStripMenuItem.Name = "用户ToolStripMenuItem";
-            this.用户ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.用户ToolStripMenuItem.Text = "出入管理";
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(929, 435);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "车辆管理";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // 自由车辆登记ToolStripMenuItem
+            // groupBox3
             // 
-            this.自由车辆登记ToolStripMenuItem.Name = "自由车辆登记ToolStripMenuItem";
-            this.自由车辆登记ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
-            this.自由车辆登记ToolStripMenuItem.Text = "自由车辆登记";
+            this.groupBox3.Controls.Add(this.button_leave);
+            this.groupBox3.Controls.Add(this.button_enter);
+            this.groupBox3.Location = new System.Drawing.Point(6, 7);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(148, 100);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "进出管理";
             // 
-            // 固定车辆登记ToolStripMenuItem
+            // button_leave
             // 
-            this.固定车辆登记ToolStripMenuItem.Name = "固定车辆登记ToolStripMenuItem";
-            this.固定车辆登记ToolStripMenuItem.Size = new System.Drawing.Size(168, 24);
-            this.固定车辆登记ToolStripMenuItem.Text = "固定车辆登记";
+            this.button_leave.Location = new System.Drawing.Point(10, 58);
+            this.button_leave.Name = "button_leave";
+            this.button_leave.Size = new System.Drawing.Size(75, 23);
+            this.button_leave.TabIndex = 1;
+            this.button_leave.Text = "离开";
+            this.button_leave.UseVisualStyleBackColor = true;
             // 
-            // 信息查询ToolStripMenuItem
+            // button_enter
             // 
-            this.信息查询ToolStripMenuItem.Name = "信息查询ToolStripMenuItem";
-            this.信息查询ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.信息查询ToolStripMenuItem.Text = "信息查询";
+            this.button_enter.Location = new System.Drawing.Point(10, 25);
+            this.button_enter.Name = "button_enter";
+            this.button_enter.Size = new System.Drawing.Size(75, 23);
+            this.button_enter.TabIndex = 0;
+            this.button_enter.Text = "进入";
+            this.button_enter.UseVisualStyleBackColor = true;
+            this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
             // 
-            // 系统管理ToolStripMenuItem
+            // tabPage3
             // 
-            this.系统管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.业主信息ToolStripMenuItem});
-            this.系统管理ToolStripMenuItem.Name = "系统管理ToolStripMenuItem";
-            this.系统管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            this.系统管理ToolStripMenuItem.Text = "系统管理";
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(929, 435);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "收费记录";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // 业主信息ToolStripMenuItem
+            // tabPage4
             // 
-            this.业主信息ToolStripMenuItem.Name = "业主信息ToolStripMenuItem";
-            this.业主信息ToolStripMenuItem.Size = new System.Drawing.Size(138, 24);
-            this.业主信息ToolStripMenuItem.Text = "业主信息";
-            this.业主信息ToolStripMenuItem.Click += new System.EventHandler(this.业主信息ToolStripMenuItem_Click);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(929, 435);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "tabPage4";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // 退出ToolStripMenuItem
+            // tabPage5
             // 
-            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
-            this.退出ToolStripMenuItem.Text = "退出";
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Size = new System.Drawing.Size(929, 435);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "管理员信息";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.button_save);
+            this.groupBox4.Controls.Add(this.text_admin_password2);
+            this.groupBox4.Controls.Add(this.text_admin_password);
+            this.groupBox4.Controls.Add(this.label17);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.text_admin_tel);
+            this.groupBox4.Controls.Add(this.text_admin_age);
+            this.groupBox4.Controls.Add(this.text_admin_id);
+            this.groupBox4.Controls.Add(this.text_admin_name);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Location = new System.Drawing.Point(4, 4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(654, 286);
+            this.groupBox4.TabIndex = 0;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "管理员信息";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(30, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "姓名";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 15);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "账号";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "年龄";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(30, 146);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "电话";
+            // 
+            // text_admin_name
+            // 
+            this.text_admin_name.Location = new System.Drawing.Point(93, 36);
+            this.text_admin_name.Name = "text_admin_name";
+            this.text_admin_name.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_name.TabIndex = 4;
+            // 
+            // text_admin_id
+            // 
+            this.text_admin_id.Location = new System.Drawing.Point(93, 72);
+            this.text_admin_id.Name = "text_admin_id";
+            this.text_admin_id.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_id.TabIndex = 5;
+            // 
+            // text_admin_age
+            // 
+            this.text_admin_age.Location = new System.Drawing.Point(93, 105);
+            this.text_admin_age.Name = "text_admin_age";
+            this.text_admin_age.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_age.TabIndex = 6;
+            // 
+            // text_admin_tel
+            // 
+            this.text_admin_tel.Location = new System.Drawing.Point(93, 146);
+            this.text_admin_tel.Name = "text_admin_tel";
+            this.text_admin_tel.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_tel.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(74, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "修改信息";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(261, 36);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 15);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "密码";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(261, 72);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(67, 15);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "确认密码";
+            // 
+            // text_admin_password
+            // 
+            this.text_admin_password.Location = new System.Drawing.Point(353, 24);
+            this.text_admin_password.Name = "text_admin_password";
+            this.text_admin_password.Size = new System.Drawing.Size(100, 25);
+            this.text_admin_password.TabIndex = 11;
+            // 
+            // text_admin_password2
+            // 
+            this.text_admin_password2.Location = new System.Drawing.Point(353, 69);
+            this.text_admin_password2.Name = "text_admin_password2";
+            this.text_admin_password2.Size = new System.Drawing.Size(100, 25);
+            this.text_admin_password2.TabIndex = 12;
+            // 
+            // button_save
+            // 
+            this.button_save.Location = new System.Drawing.Point(195, 220);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(75, 23);
+            this.button_save.TabIndex = 13;
+            this.button_save.Text = "保存修改";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 378);
+            this.ClientSize = new System.Drawing.Size(934, 541);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Formmain";
             this.Text = "停车场管理系统";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -308,10 +489,13 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -332,13 +516,28 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 用户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 自由车辆登记ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 固定车辆登记ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 信息查询ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 系统管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 业主信息ToolStripMenuItem;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button_leave;
+        private System.Windows.Forms.Button button_enter;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox text_admin_tel;
+        private System.Windows.Forms.TextBox text_admin_age;
+        private System.Windows.Forms.TextBox text_admin_id;
+        private System.Windows.Forms.TextBox text_admin_name;
+        private System.Windows.Forms.TextBox text_admin_password;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox text_admin_password2;
+        private System.Windows.Forms.Button button_save;
     }
 }

@@ -7,3 +7,4 @@ C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\20151104688刘宇轩.csprojResolveAssemblyReference.cache
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.Formlog.resources
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.Formmain.resources
+C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.FreedomCarEnter.resources
