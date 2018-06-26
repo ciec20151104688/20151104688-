@@ -11,6 +11,9 @@ namespace _20151104688刘宇轩
 {
     public partial class Formmain : Form
     {
+        private string user;
+        private string pwd;
+
         public Formmain()
         {
             InitializeComponent();
@@ -21,6 +24,13 @@ namespace _20151104688刘宇轩
         {
             InitializeComponent();
             label11.Text = str;
+        }
+
+        public Formmain(string user, string pwd)
+        {
+            // TODO: Complete member initialization
+            this.user = user;
+            this.pwd = pwd;
         }
         private void label1_Click(object sender, EventArgs e)
         {
