@@ -38,11 +38,10 @@ namespace _20151104688刘宇轩
             MySqlConnection connection_userpass = new MySqlConnection(connectionString);
             connection_username.Open();
             connection_userpass.Open();
-            MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinfor WHERE username = '" + txtName.Text + "'", connection_username);
-            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinfor WHERE username = '" + txtPwd.Text + "'", connection_userpass);
+            MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_username);
+            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE userpass = '" + txtPwd.Text + "'", connection_userpass);
             MySqlDataReader reader1 = command1.ExecuteReader();
             MySqlDataReader reader2 = command2.ExecuteReader();   
-           // reader1.Read();
             if (reader1.HasRows)
             {
                 connection_username.Close();
@@ -52,32 +51,27 @@ namespace _20151104688刘宇轩
                     {
                         user = txtName.Text;
                         pwd = txtPwd.Text;
-                        Formmain fm2 = new Formmain(user, pwd);
-                        fm2.Show();
+                        Formmain fma = new Formmain(txtName.Text);
+                        fma.Show();
                     }
                     else
                     {
                         MessageBox.Show("密码输入错误，请重新输入！");
-               
-
                     }
             }
             else
             {
                 MessageBox.Show("用户名不存在，请先注册");
             }  
-        }
-        }
-        private void btnregister_Click(object sender, EventArgs e)
-        {
-           
-            
-
-                }
+                }       
+                    }
 
         private void btnRegister_Click_1(object sender, EventArgs e)
         {
-        
+            Register frmregister = new Register();
+            Formlog frmlogin = new Formlog();
+            frmlogin.Hide();
+            frmregister.Show();
         }
         }
 

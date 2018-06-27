@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("张三");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("李四");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("王五");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("赵7");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode16,
-            treeNode17});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("张三");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("李四");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("王五");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("赵7");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.tname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -55,30 +55,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.text_admin_name = new System.Windows.Forms.TextBox();
-            this.text_admin_id = new System.Windows.Forms.TextBox();
-            this.text_admin_age = new System.Windows.Forms.TextBox();
-            this.text_admin_tel = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.text_admin_password = new System.Windows.Forms.TextBox();
-            this.text_admin_password2 = new System.Windows.Forms.TextBox();
             this.button_save = new System.Windows.Forms.Button();
+            this.text_admin_password2 = new System.Windows.Forms.TextBox();
+            this.text_admin_password = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.text_admin_tel = new System.Windows.Forms.TextBox();
+            this.text_admin_age = new System.Windows.Forms.TextBox();
+            this.text_admin_id = new System.Windows.Forms.TextBox();
+            this.text_admin_name = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button_enter = new System.Windows.Forms.Button();
-            this.button_leave = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button_leave = new System.Windows.Forms.Button();
+            this.button_enter = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
@@ -91,7 +90,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.tname);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 474);
             this.groupBox1.Name = "groupBox1";
@@ -101,15 +100,14 @@
             this.groupBox1.Text = "系统状态";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // label11
+            // tname
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(148, 25);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 15);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "label11";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
+            this.tname.AutoSize = true;
+            this.tname.Location = new System.Drawing.Point(148, 25);
+            this.tname.Name = "tname";
+            this.tname.Size = new System.Drawing.Size(0, 15);
+            this.tname.TabIndex = 2;
+            this.tname.Click += new System.EventHandler(this.label11_Click);
             // 
             // label1
             // 
@@ -126,25 +124,24 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 123);
             this.treeView1.Name = "treeView1";
-            treeNode13.Name = "zhangsan";
-            treeNode13.Text = "张三";
-            treeNode14.Name = "lisi";
-            treeNode14.Text = "李四";
-            treeNode15.Name = "节点0";
-            treeNode15.Text = "一层业主";
-            treeNode16.Name = "wangwu";
-            treeNode16.Text = "王五";
-            treeNode17.Name = "zhaoqi";
-            treeNode17.Text = "赵7";
-            treeNode18.Name = "节点4";
-            treeNode18.Text = "二层业主";
+            treeNode7.Name = "zhangsan";
+            treeNode7.Text = "张三";
+            treeNode8.Name = "lisi";
+            treeNode8.Text = "李四";
+            treeNode9.Name = "节点0";
+            treeNode9.Text = "一层业主";
+            treeNode10.Name = "wangwu";
+            treeNode10.Text = "王五";
+            treeNode11.Name = "zhaoqi";
+            treeNode11.Text = "赵7";
+            treeNode12.Name = "节点4";
+            treeNode12.Text = "二层业主";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode18});
+            treeNode9,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(121, 112);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
             // groupBox2
             // 
@@ -285,81 +282,38 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "管理员信息";
             // 
-            // label12
+            // button_save
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(30, 36);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 15);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "姓名";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.button_save.Location = new System.Drawing.Point(195, 220);
+            this.button_save.Name = "button_save";
+            this.button_save.Size = new System.Drawing.Size(75, 23);
+            this.button_save.TabIndex = 13;
+            this.button_save.Text = "保存修改";
+            this.button_save.UseVisualStyleBackColor = true;
+            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
-            // label13
+            // text_admin_password2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 72);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 15);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "账号";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.text_admin_password2.Location = new System.Drawing.Point(353, 69);
+            this.text_admin_password2.Name = "text_admin_password2";
+            this.text_admin_password2.Size = new System.Drawing.Size(100, 25);
+            this.text_admin_password2.TabIndex = 12;
             // 
-            // label14
+            // text_admin_password
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 105);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 15);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "年龄";
+            this.text_admin_password.Location = new System.Drawing.Point(353, 24);
+            this.text_admin_password.Name = "text_admin_password";
+            this.text_admin_password.Size = new System.Drawing.Size(100, 25);
+            this.text_admin_password.TabIndex = 11;
             // 
-            // label15
+            // label17
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(30, 146);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(37, 15);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "电话";
-            // 
-            // text_admin_name
-            // 
-            this.text_admin_name.Location = new System.Drawing.Point(93, 36);
-            this.text_admin_name.Name = "text_admin_name";
-            this.text_admin_name.Size = new System.Drawing.Size(136, 25);
-            this.text_admin_name.TabIndex = 4;
-            // 
-            // text_admin_id
-            // 
-            this.text_admin_id.Location = new System.Drawing.Point(93, 72);
-            this.text_admin_id.Name = "text_admin_id";
-            this.text_admin_id.Size = new System.Drawing.Size(136, 25);
-            this.text_admin_id.TabIndex = 5;
-            // 
-            // text_admin_age
-            // 
-            this.text_admin_age.Location = new System.Drawing.Point(93, 105);
-            this.text_admin_age.Name = "text_admin_age";
-            this.text_admin_age.Size = new System.Drawing.Size(136, 25);
-            this.text_admin_age.TabIndex = 6;
-            // 
-            // text_admin_tel
-            // 
-            this.text_admin_tel.Location = new System.Drawing.Point(93, 146);
-            this.text_admin_tel.Name = "text_admin_tel";
-            this.text_admin_tel.Size = new System.Drawing.Size(136, 25);
-            this.text_admin_tel.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(66, 220);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "修改信息";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(261, 72);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(67, 15);
+            this.label17.TabIndex = 10;
+            this.label17.Text = "确认密码";
             // 
             // label16
             // 
@@ -371,38 +325,81 @@
             this.label16.Text = "密码";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
-            // label17
+            // button1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(261, 72);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(67, 15);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "确认密码";
+            this.button1.Location = new System.Drawing.Point(66, 220);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "修改信息";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // text_admin_password
+            // text_admin_tel
             // 
-            this.text_admin_password.Location = new System.Drawing.Point(353, 24);
-            this.text_admin_password.Name = "text_admin_password";
-            this.text_admin_password.Size = new System.Drawing.Size(100, 25);
-            this.text_admin_password.TabIndex = 11;
+            this.text_admin_tel.Location = new System.Drawing.Point(93, 146);
+            this.text_admin_tel.Name = "text_admin_tel";
+            this.text_admin_tel.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_tel.TabIndex = 7;
             // 
-            // text_admin_password2
+            // text_admin_age
             // 
-            this.text_admin_password2.Location = new System.Drawing.Point(353, 69);
-            this.text_admin_password2.Name = "text_admin_password2";
-            this.text_admin_password2.Size = new System.Drawing.Size(100, 25);
-            this.text_admin_password2.TabIndex = 12;
+            this.text_admin_age.Location = new System.Drawing.Point(93, 105);
+            this.text_admin_age.Name = "text_admin_age";
+            this.text_admin_age.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_age.TabIndex = 6;
             // 
-            // button_save
+            // text_admin_id
             // 
-            this.button_save.Location = new System.Drawing.Point(195, 220);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(75, 23);
-            this.button_save.TabIndex = 13;
-            this.button_save.Text = "保存修改";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.text_admin_id.Location = new System.Drawing.Point(93, 72);
+            this.text_admin_id.Name = "text_admin_id";
+            this.text_admin_id.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_id.TabIndex = 5;
+            // 
+            // text_admin_name
+            // 
+            this.text_admin_name.Location = new System.Drawing.Point(93, 36);
+            this.text_admin_name.Name = "text_admin_name";
+            this.text_admin_name.Size = new System.Drawing.Size(136, 25);
+            this.text_admin_name.TabIndex = 4;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(30, 146);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(37, 15);
+            this.label15.TabIndex = 3;
+            this.label15.Text = "电话";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 105);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 15);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "年龄";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(30, 72);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 15);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "账号";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(30, 36);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 15);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "姓名";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // tabPage4
             // 
@@ -426,7 +423,6 @@
             // 
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -436,16 +432,44 @@
             this.tabPage2.Text = "车辆管理";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(166, 319);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(63, 15);
+            this.label19.TabIndex = 3;
+            this.label19.Text = "label19";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(3, 319);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 15);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "剩余车位：";
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.button_leave);
             this.groupBox3.Controls.Add(this.button_enter);
-            this.groupBox3.Location = new System.Drawing.Point(361, 15);
+            this.groupBox3.Location = new System.Drawing.Point(747, 319);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(148, 95);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "进出管理";
+            // 
+            // button_leave
+            // 
+            this.button_leave.Location = new System.Drawing.Point(10, 58);
+            this.button_leave.Name = "button_leave";
+            this.button_leave.Size = new System.Drawing.Size(75, 23);
+            this.button_leave.TabIndex = 1;
+            this.button_leave.Text = "离开";
+            this.button_leave.UseVisualStyleBackColor = true;
+            this.button_leave.Click += new System.EventHandler(this.button_leave_Click);
             // 
             // button_enter
             // 
@@ -456,15 +480,6 @@
             this.button_enter.Text = "进入";
             this.button_enter.UseVisualStyleBackColor = true;
             this.button_enter.Click += new System.EventHandler(this.button_enter_Click);
-            // 
-            // button_leave
-            // 
-            this.button_leave.Location = new System.Drawing.Point(10, 58);
-            this.button_leave.Name = "button_leave";
-            this.button_leave.Size = new System.Drawing.Size(75, 23);
-            this.button_leave.TabIndex = 1;
-            this.button_leave.Text = "离开";
-            this.button_leave.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -477,33 +492,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(937, 464);
             this.tabControl1.TabIndex = 3;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Location = new System.Drawing.Point(0, 3);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(343, 288);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "停车场状态";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 319);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(82, 15);
-            this.label18.TabIndex = 2;
-            this.label18.Text = "剩余车位：";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(166, 319);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(63, 15);
-            this.label19.TabIndex = 3;
-            this.label19.Text = "label19";
             // 
             // Formmain
             // 
@@ -549,7 +537,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label tname;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button_save;
@@ -575,6 +563,5 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.GroupBox groupBox5;
     }
 }

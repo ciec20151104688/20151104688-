@@ -25,7 +25,7 @@ namespace _20151104688刘宇轩
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
             MySqlConnection connection = new MySqlConnection(connectionString);
             connection.Open();
-            MySqlCommand command = new MySqlCommand("insert into parkinglot.userinfor(username,userpass)values('" + txtregistername.Text + "','" + txtregisterpass.Text + "')", connection);
+            MySqlCommand command = new MySqlCommand("insert into parkinglot.userinf(username,userpass)values('" + txtregistername.Text + "','" + txtregisterpass.Text + "')", connection);
             if (txtregistername.TextLength <= 0 || txtregisterpass.TextLength <= 0)
             {
                 MessageBox.Show("用户名或密码不能为空！");
