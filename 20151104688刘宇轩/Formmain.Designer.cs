@@ -28,16 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("张三");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("李四");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode7,
-            treeNode8});
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("王五");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("赵7");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode10,
-            treeNode11});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("张三");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("李四");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode19,
+            treeNode20});
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("王五");
+            System.Windows.Forms.TreeNode treeNode23 = new System.Windows.Forms.TreeNode("赵7");
+            System.Windows.Forms.TreeNode treeNode24 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode22,
+            treeNode23});
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Formmain));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,18 +73,29 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button_leave = new System.Windows.Forms.Button();
             this.button_enter = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.SuspendLayout();
@@ -124,21 +136,21 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 123);
             this.treeView1.Name = "treeView1";
-            treeNode7.Name = "zhangsan";
-            treeNode7.Text = "张三";
-            treeNode8.Name = "lisi";
-            treeNode8.Text = "李四";
-            treeNode9.Name = "节点0";
-            treeNode9.Text = "一层业主";
-            treeNode10.Name = "wangwu";
-            treeNode10.Text = "王五";
-            treeNode11.Name = "zhaoqi";
-            treeNode11.Text = "赵7";
-            treeNode12.Name = "节点4";
-            treeNode12.Text = "二层业主";
+            treeNode19.Name = "zhangsan";
+            treeNode19.Text = "张三";
+            treeNode20.Name = "lisi";
+            treeNode20.Text = "李四";
+            treeNode21.Name = "节点0";
+            treeNode21.Text = "一层业主";
+            treeNode22.Name = "wangwu";
+            treeNode22.Text = "王五";
+            treeNode23.Name = "zhaoqi";
+            treeNode23.Text = "赵7";
+            treeNode24.Name = "节点4";
+            treeNode24.Text = "二层业主";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode12});
+            treeNode21,
+            treeNode24});
             this.treeView1.Size = new System.Drawing.Size(121, 112);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
@@ -290,7 +302,6 @@
             this.button_save.TabIndex = 13;
             this.button_save.Text = "保存修改";
             this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // text_admin_password2
             // 
@@ -421,6 +432,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.toolStrip1);
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label18);
             this.tabPage2.Controls.Add(this.groupBox3);
@@ -429,13 +442,66 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(929, 435);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "车辆管理";
+            this.tabPage2.Text = "车辆登记";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3});
+            this.toolStrip1.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(923, 27);
+            this.toolStrip1.TabIndex = 5;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never;
+            this.toolStripButton1.Size = new System.Drawing.Size(89, 24);
+            this.toolStripButton1.Text = "停车登记";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(119, 24);
+            this.toolStripButton2.Text = "修改登记信息";
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(89, 24);
+            this.toolStripButton3.Text = "删除信息";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.sex,
+            this.age,
+            this.num});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(717, 263);
+            this.dataGridView1.TabIndex = 4;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(166, 319);
+            this.label19.Location = new System.Drawing.Point(118, 365);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(63, 15);
             this.label19.TabIndex = 3;
@@ -444,7 +510,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(3, 319);
+            this.label18.Location = new System.Drawing.Point(13, 365);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(82, 15);
             this.label18.TabIndex = 2;
@@ -469,7 +535,6 @@
             this.button_leave.TabIndex = 1;
             this.button_leave.Text = "离开";
             this.button_leave.UseVisualStyleBackColor = true;
-            this.button_leave.Click += new System.EventHandler(this.button_leave_Click);
             // 
             // button_enter
             // 
@@ -493,6 +558,30 @@
             this.tabControl1.Size = new System.Drawing.Size(937, 464);
             this.tabControl1.TabIndex = 3;
             // 
+            // name
+            // 
+            this.name.DataPropertyName = "colName";
+            this.name.HeaderText = "姓名";
+            this.name.Name = "name";
+            // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "colSex";
+            this.sex.HeaderText = "性别";
+            this.sex.Name = "sex";
+            // 
+            // age
+            // 
+            this.age.DataPropertyName = "colSex";
+            this.age.HeaderText = "年龄";
+            this.age.Name = "age";
+            // 
+            // num
+            // 
+            this.num.DataPropertyName = "colNum";
+            this.num.HeaderText = "停车编号";
+            this.num.Name = "num";
+            // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -515,6 +604,9 @@
             this.groupBox4.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -563,5 +655,14 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num;
     }
 }

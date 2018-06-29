@@ -13,11 +13,20 @@ namespace _20151104688刘宇轩
     {
         private string user;
         private string pwd;
-
+        public static DataTable dt = new DataTable();
         public Formmain()
         {
             InitializeComponent();
-            this.BackgroundImage = Image.FromFile("D:\\2.jpg");
+            DataColumn colName = new DataColumn("colName");
+            DataColumn colSex = new DataColumn("colSex");
+            DataColumn colAge = new DataColumn("colAge");
+            DataColumn colNum = new DataColumn("colNum");
+            // DataColumn colInterest = new DataColumn("colInterest");
+            dt.Columns.Add(colName);
+            dt.Columns.Add(colSex);
+            dt.Columns.Add(colAge);
+            dt.Columns.Add(colNum);
+            //dt.Columns.Add(colInterest);
         }
 
         public Formmain(string str)
@@ -118,26 +127,21 @@ namespace _20151104688刘宇轩
 
         }
 
-        private void button_save_Click(object sender, EventArgs e)
+        private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (this.text_admin_password.Text == "" && this.text_admin_password2.Text == "")
-            {
-            }
-            else if (this.text_admin_password.Text != this.text_admin_password2.Text)
-            {
-                MessageBox.Show("两次输入的密码不一致！请重新输入");
-                this.text_admin_password.Text = "";
-                this.text_admin_password2.Text = "";
-            }
-            else
-            {
-            }
+            Information information = new Information(dataGridView1);
+            information.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
               
         }
-
-        private void button_leave_Click(object sender, EventArgs e)
-        {
-
-        }
-    }
+            
 }
+
+

@@ -61,7 +61,7 @@ namespace _20151104688刘宇轩
             }
             else
             {
-                MessageBox.Show("用户名不存在，请先注册");
+                MessageBox.Show("用户名不存在");
             }  
                 }       
                     }

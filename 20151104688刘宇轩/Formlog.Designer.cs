@@ -80,9 +80,9 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(204, 193);
+            this.btnRegister.Location = new System.Drawing.Point(177, 193);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(75, 23);
+            this.btnRegister.Size = new System.Drawing.Size(102, 23);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "注册用户";
             this.btnRegister.UseVisualStyleBackColor = true;
