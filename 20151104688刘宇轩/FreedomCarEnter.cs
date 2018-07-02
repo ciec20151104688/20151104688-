@@ -13,9 +13,19 @@ namespace _20151104688刘宇轩
     {
         TimeSpan TimeCount = new TimeSpan();
         System.DateTime TimeNow = new DateTime();
+        public static DataTable dt = new DataTable();
         public FreedomCarEnter()
         {
             InitializeComponent();
+            DataColumn name = new DataColumn("name");
+            DataColumn sex = new DataColumn("sex");
+            DataColumn age = new DataColumn("age");
+            DataColumn num = new DataColumn("num");
+            DataColumn Where = new DataColumn("Where");            // DataColumn colInterest = new DataColumn("colInterest");
+            dt.Columns.Add(name);
+            dt.Columns.Add(sex);
+            dt.Columns.Add(age);
+            dt.Columns.Add(num);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,6 +49,33 @@ namespace _20151104688刘宇轩
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Information information = new Information(dataGridView1);
+            information.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            //1、弹出提示框，如果选择“是”，执行以下步骤。
+            DialogResult ds = MessageBox.Show("是否删除当前信息？？？", "提示", MessageBoxButtons.OKCancel);
+            if (ds == DialogResult.OK)
+            {
+                //2、获取当前选中的行 索
+                int index = dataGridView1.SelectedRows[0].Index;
+
+                //3、从DataTable中查找要删除的信息。
+                dt.Rows.RemoveAt(index);
+
+                //4、重新绑定DatagridView；
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
         }
     }
 }

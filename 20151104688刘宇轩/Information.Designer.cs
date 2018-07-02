@@ -32,10 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.userName = new System.Windows.Forms.TextBox();
-            this.Age = new System.Windows.Forms.TextBox();
-            this.Unm = new System.Windows.Forms.TextBox();
-            this.Sex = new System.Windows.Forms.ComboBox();
+            this.name = new System.Windows.Forms.TextBox();
+            this.age = new System.Windows.Forms.TextBox();
+            this.unm = new System.Windows.Forms.TextBox();
+            this.sex = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -76,38 +76,38 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "停车编号：";
             // 
-            // userName
+            // name
             // 
-            this.userName.Location = new System.Drawing.Point(90, 22);
-            this.userName.Name = "userName";
-            this.userName.Size = new System.Drawing.Size(100, 25);
-            this.userName.TabIndex = 4;
-            this.userName.TextChanged += new System.EventHandler(this.userName_TextChanged);
+            this.name.Location = new System.Drawing.Point(90, 22);
+            this.name.Name = "name";
+            this.name.Size = new System.Drawing.Size(100, 25);
+            this.name.TabIndex = 4;
+            this.name.TextChanged += new System.EventHandler(this.userName_TextChanged);
             // 
-            // Age
+            // age
             // 
-            this.Age.Location = new System.Drawing.Point(90, 85);
-            this.Age.Name = "Age";
-            this.Age.Size = new System.Drawing.Size(100, 25);
-            this.Age.TabIndex = 6;
+            this.age.Location = new System.Drawing.Point(90, 85);
+            this.age.Name = "age";
+            this.age.Size = new System.Drawing.Size(100, 25);
+            this.age.TabIndex = 6;
             // 
-            // Unm
+            // unm
             // 
-            this.Unm.Location = new System.Drawing.Point(90, 158);
-            this.Unm.Name = "Unm";
-            this.Unm.Size = new System.Drawing.Size(100, 25);
-            this.Unm.TabIndex = 7;
+            this.unm.Location = new System.Drawing.Point(90, 158);
+            this.unm.Name = "unm";
+            this.unm.Size = new System.Drawing.Size(100, 25);
+            this.unm.TabIndex = 7;
             // 
-            // Sex
+            // sex
             // 
-            this.Sex.FormattingEnabled = true;
-            this.Sex.Items.AddRange(new object[] {
+            this.sex.FormattingEnabled = true;
+            this.sex.Items.AddRange(new object[] {
             "男",
             "女"});
-            this.Sex.Location = new System.Drawing.Point(311, 24);
-            this.Sex.Name = "Sex";
-            this.Sex.Size = new System.Drawing.Size(121, 23);
-            this.Sex.TabIndex = 8;
+            this.sex.Location = new System.Drawing.Point(311, 24);
+            this.sex.Name = "sex";
+            this.sex.Size = new System.Drawing.Size(121, 23);
+            this.sex.TabIndex = 8;
             // 
             // button1
             // 
@@ -135,16 +135,17 @@
             this.ClientSize = new System.Drawing.Size(481, 262);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Sex);
-            this.Controls.Add(this.Unm);
-            this.Controls.Add(this.Age);
-            this.Controls.Add(this.userName);
+            this.Controls.Add(this.sex);
+            this.Controls.Add(this.unm);
+            this.Controls.Add(this.age);
+            this.Controls.Add(this.name);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Information";
-            this.Text = "Information";
+            this.Text = "添加车主信息";
+            this.Load += new System.EventHandler(this.Information_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,10 +157,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox userName;
-        private System.Windows.Forms.TextBox Age;
-        private System.Windows.Forms.TextBox Unm;
-        private System.Windows.Forms.ComboBox Sex;
+        private System.Windows.Forms.TextBox name;
+        private System.Windows.Forms.TextBox age;
+        private System.Windows.Forms.TextBox unm;
+        private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }

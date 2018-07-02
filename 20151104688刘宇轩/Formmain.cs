@@ -11,22 +11,13 @@ namespace _20151104688刘宇轩
 {
     public partial class Formmain : Form
     {
+        public static DataTable dt = new DataTable();
         private string user;
         private string pwd;
-        public static DataTable dt = new DataTable();
         public Formmain()
         {
             InitializeComponent();
-            DataColumn colName = new DataColumn("colName");
-            DataColumn colSex = new DataColumn("colSex");
-            DataColumn colAge = new DataColumn("colAge");
-            DataColumn colNum = new DataColumn("colNum");
-            // DataColumn colInterest = new DataColumn("colInterest");
-            dt.Columns.Add(colName);
-            dt.Columns.Add(colSex);
-            dt.Columns.Add(colAge);
-            dt.Columns.Add(colNum);
-            //dt.Columns.Add(colInterest);
+           
         }
 
         public Formmain(string str)
@@ -129,8 +120,6 @@ namespace _20151104688刘宇轩
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            Information information = new Information(dataGridView1);
-            information.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -138,9 +127,21 @@ namespace _20151104688刘宇轩
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            FreedomCarEnter freecarEnter = new FreedomCarEnter();
+            freecarEnter.Show();
+
+        }
+
 
               
         }
+   
             
 }
 

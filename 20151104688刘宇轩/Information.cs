@@ -20,19 +20,25 @@ namespace _20151104688刘宇轩
         {
             InitializeComponent();
             dataGridView1 = _dataGridView1;
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            DataRow dr = Formmain.dt.NewRow();
-            dr["colName"] = userName.Text;
-            dr["colSex"] = Sex.Text;
-            dr["colAge"] = Age.Text;
-            dr["colNum"] = Unm.Text;
-            Formmain.dt.Rows.Add(dr);
-            dataGridView1.DataSource = Formmain.dt;
+            DataRow dr = FreedomCarEnter.dt.NewRow();
+            dr["name"] = name.Text;
+            dr["Sex"] = sex.Text;
+            dr["Age"] = age.Text;
+            dr["Num"] = unm.Text;
+            FreedomCarEnter.dt.Rows.Add(dr);
+            dataGridView1.DataSource = FreedomCarEnter.dt;
         }
 
         private void userName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Information_Load(object sender, EventArgs e)
         {
 
         }
