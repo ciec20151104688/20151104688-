@@ -15,7 +15,7 @@ namespace _20151104688刘宇轩
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Formlog());
+            Application.Run(new FreedomCarEnter());
         }
     }
 }

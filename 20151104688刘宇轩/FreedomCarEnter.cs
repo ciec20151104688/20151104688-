@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
 
 namespace _20151104688刘宇轩
 {
@@ -18,6 +19,11 @@ namespace _20151104688刘宇轩
         MySqlConnection conn;   // mysql连接
         MySqlDataAdapter myadp; // mysql数据适配器
         DataSet myds;   // 数据集
+
+
+
+
+        
 
 
         public FreedomCarEnter()
@@ -88,11 +94,6 @@ namespace _20151104688刘宇轩
 
         private void FreedomCarEnter_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
             string MyConnectionString;
             MyConnectionString = "server = localhost; uid = root; pwd = 123456; database = parkinglot";
             try
@@ -121,6 +122,12 @@ namespace _20151104688刘宇轩
                         MessageBox.Show(ex.Message); break;
                 }
             }
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -134,14 +141,11 @@ namespace _20151104688刘宇轩
                 conn.Open();   // 打开连接（opened）
                 myadp = new MySqlDataAdapter("select * from carinfor", conn);
                 myds = new DataSet();
-                  
-                
-
-                BindingSource bindingSource2 = new BindingSource();
-                dataGridView1.DataSource = bindingSource2;
-                bindingSource2.DataSource = myds.Tables["carinfor"];
+                BindingSource bindingSource1 = new BindingSource();
+                dataGridView1.DataSource = bindingSource1;
+                bindingSource1.DataSource = myds.Tables["carinfor"];
                 MySqlCommandBuilder mycb = new MySqlCommandBuilder(myadp);
-                myadp.Update(myds, "carinfor");
+                myadp.Update(myds, "insert into carinfor(name,sex,age,num)values(255,255,255,255)");
             }
             catch (MySqlException ex)
             {
