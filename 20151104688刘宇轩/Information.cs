@@ -26,7 +26,21 @@ namespace _20151104688刘宇轩
         }
         private void button1_Click(object sender, EventArgs e)
         {
+            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            connection.Open();
+            MySqlCommand command = new MySqlCommand("insert into parkinglot.carinfor(name,age,sex,num)values('" + name.Text + "','" + age.Text + "','" + sex.Text + "','" + unm.Text + "')", connection);
+            if (
+                command.ExecuteNonQuery() > 0)
+            {
+                MessageBox.Show("success");
+            }
+            else
+            {
+                MessageBox.Show("1");
+            }
             DataRow dr = FreedomCarEnter.dt.NewRow();
+
             dr["name"] = name.Text;
             dr["Sex"] = sex.Text;
             dr["Age"] = age.Text;

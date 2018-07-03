@@ -102,6 +102,9 @@ namespace _20151104688刘宇轩
                 conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
                 conn.Open();   // 打开连接（opened）
                 myadp = new MySqlDataAdapter("select * from carinfor", conn);
+
+
+
                 myds = new DataSet();
                 myadp.Fill(myds, "carinfor");
                 BindingSource bindingSource1 = new BindingSource();
@@ -145,7 +148,9 @@ namespace _20151104688刘宇轩
                 dataGridView1.DataSource = bindingSource1;
                 bindingSource1.DataSource = myds.Tables["carinfor"];
                 MySqlCommandBuilder mycb = new MySqlCommandBuilder(myadp);
-                myadp.Update(myds, "insert into carinfor(name,sex,age,num)values(255,255,255,255)");
+                myadp.Update(myds, "insert into parkinglot.carinfor(name,sex)values");
+
+
             }
             catch (MySqlException ex)
             {
