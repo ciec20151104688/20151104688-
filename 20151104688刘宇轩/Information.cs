@@ -6,12 +6,14 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace _20151104688刘宇轩
 {
     public partial class Information : Form
     {
         DataGridView dataGridView1;
+        public static DataTable dt = new DataTable();
         public Information()
         {
             InitializeComponent();

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace _20151104688刘宇轩
 {
@@ -14,6 +15,11 @@ namespace _20151104688刘宇轩
         TimeSpan TimeCount = new TimeSpan();
         System.DateTime TimeNow = new DateTime();
         public static DataTable dt = new DataTable();
+        MySqlConnection conn;   // mysql连接
+        MySqlDataAdapter myadp; // mysql数据适配器
+        DataSet myds;   // 数据集
+
+
         public FreedomCarEnter()
         {
             InitializeComponent();
@@ -27,6 +33,8 @@ namespace _20151104688刘宇轩
             dt.Columns.Add(age);
             dt.Columns.Add(num);
         }
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -76,6 +84,79 @@ namespace _20151104688刘宇轩
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+
+        private void FreedomCarEnter_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string MyConnectionString;
+            MyConnectionString = "server = localhost; uid = root; pwd = 123456; database = parkinglot";
+            try
+            {
+                conn = new MySqlConnection();   // 实例化数据库连接（instanced）
+                conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
+                conn.Open();   // 打开连接（opened）
+                myadp = new MySqlDataAdapter("select * from carinfor", conn);
+                myds = new DataSet();
+                myadp.Fill(myds, "carinfor");
+                BindingSource bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = myds.Tables["carinfor"];
+                dataGridView1.DataSource = bindingSource1;
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("不能连接到数据库服务器，请联系数据库管理员！"); break;
+                    case 1045:
+                        MessageBox.Show("无效的用户名/密码,请重试！"); break;
+                    case 1049:
+                        MessageBox.Show("数据库不存在，或数据库名错误"); break;
+                    default:
+                        MessageBox.Show(ex.Message); break;
+                }
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            string MyConnectionString;
+            MyConnectionString = "server = localhost; uid = root; pwd = 123456; database = parkinglot";
+            try
+            {
+                conn = new MySqlConnection();   // 实例化数据库连接（instanced）
+                conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
+                conn.Open();   // 打开连接（opened）
+                myadp = new MySqlDataAdapter("select * from carinfor", conn);
+                myds = new DataSet();
+                  
+                
+
+                BindingSource bindingSource2 = new BindingSource();
+                dataGridView1.DataSource = bindingSource2;
+                bindingSource2.DataSource = myds.Tables["carinfor"];
+                MySqlCommandBuilder mycb = new MySqlCommandBuilder(myadp);
+                myadp.Update(myds, "carinfor");
+            }
+            catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        MessageBox.Show("不能连接到数据库服务器，请联系数据库管理员！"); break;
+                    case 1045:
+                        MessageBox.Show("无效的用户名/密码,请重试！"); break;
+                    case 1049:
+                        MessageBox.Show("数据库不存在，或数据库名错误"); break;
+                    default:
+                        MessageBox.Show(ex.Message); break;
+                }
+            }
         }
     }
 }
