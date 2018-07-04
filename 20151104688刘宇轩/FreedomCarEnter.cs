@@ -148,7 +148,7 @@ namespace _20151104688刘宇轩
                 dataGridView1.DataSource = bindingSource1;
                 bindingSource1.DataSource = myds.Tables["carinfor"];
                 MySqlCommandBuilder mycb = new MySqlCommandBuilder(myadp);
-                myadp.Update(myds, "insert into parkinglot.carinfor(name,sex)values");
+                myadp.Update(myds, "insert into parkinglot.carinfor(name,sex)");
 
 
             }

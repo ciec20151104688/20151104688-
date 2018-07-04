@@ -41,22 +41,32 @@ namespace _20151104688刘宇轩
             MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_username);
             MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE userpass = '" + txtPwd.Text + "'", connection_userpass);
             MySqlDataReader reader1 = command1.ExecuteReader();
-            MySqlDataReader reader2 = command2.ExecuteReader();   
-            if (reader1.HasRows)
+            MySqlDataReader reader2 = command2.ExecuteReader();
+            if (this.txtName.Text == "")
+            {
+                MessageBox.Show("用户名不能为空!", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+             else if (reader1.HasRows)
             {
                 connection_username.Close();
                 reader2.Read();
                 pwd = reader2["userpass"].ToString();
                     if (txtPwd.Text == pwd)
                     {
+                        pwd = reader2["userpass"].ToString();
                         user = txtName.Text;
                         pwd = txtPwd.Text;
                         Formmain fma = new Formmain(txtName.Text);
                         fma.Show();
+                        this.Hide();
                     }
+       
                     else
                     {
                         MessageBox.Show("密码输入错误，请重新输入！");
+                        txtName.Text = "";
+                        txtPwd.Text = "";
+
                     }
             }
             else
@@ -65,6 +75,7 @@ namespace _20151104688刘宇轩
             }  
                 }       
                     }
+
 
         private void btnRegister_Click_1(object sender, EventArgs e)
         {

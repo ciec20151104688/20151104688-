@@ -26,27 +26,51 @@ namespace _20151104688刘宇轩
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
-            MySqlConnection connection = new MySqlConnection(connectionString);
-            connection.Open();
-            MySqlCommand command = new MySqlCommand("insert into parkinglot.carinfor(name,age,sex,num)values('" + name.Text + "','" + age.Text + "','" + sex.Text + "','" + unm.Text + "')", connection);
-            if (
-                command.ExecuteNonQuery() > 0)
+
+
+
+            if (this.name.Text == "")
             {
-                MessageBox.Show("success");
+                MessageBox.Show("姓名不能为空!", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (this.age.Text == "")
+            {
+                MessageBox.Show("年龄不能为空!", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (this.sex.Text == "")
+            {
+                MessageBox.Show("性别不能为空!", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (this.unm.Text == "")
+            {
+                MessageBox.Show("停车编号不能为空!", "系统提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("1");
-            }
-            DataRow dr = FreedomCarEnter.dt.NewRow();
+                string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("insert into parkinglot.carinfor(name,age,sex,num)values('" + name.Text + "','" + age.Text + "','" + sex.Text + "','" + unm.Text + "')", connection);
+                DataRow dr = FreedomCarEnter.dt.NewRow();
+                dr["name"] = name.Text;
+                dr["Sex"] = sex.Text;
+                dr["Age"] = age.Text;
+                dr["Num"] = unm.Text;
+                FreedomCarEnter.dt.Rows.Add(dr);
+                dataGridView1.DataSource = FreedomCarEnter.dt;
 
-            dr["name"] = name.Text;
-            dr["Sex"] = sex.Text;
-            dr["Age"] = age.Text;
-            dr["Num"] = unm.Text;
-            FreedomCarEnter.dt.Rows.Add(dr);
-            dataGridView1.DataSource = FreedomCarEnter.dt;
+
+                if (
+               command.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("成功写入数据库");
+                }
+                else
+                {
+                    MessageBox.Show("写入失败");
+                }
+            }
+
         }
 
         private void userName_TextChanged(object sender, EventArgs e)
