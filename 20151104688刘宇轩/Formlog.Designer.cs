@@ -34,12 +34,16 @@
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.logbtn = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtValidCode = new System.Windows.Forms.TextBox();
+            this.picValidCode = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picValidCode)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 74);
+            this.label1.Location = new System.Drawing.Point(153, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 15);
             this.label1.TabIndex = 0;
@@ -48,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(32, 142);
+            this.label2.Location = new System.Drawing.Point(161, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 1;
@@ -56,21 +60,21 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(80, 74);
+            this.txtName.Location = new System.Drawing.Point(248, 44);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(199, 25);
             this.txtName.TabIndex = 2;
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(80, 139);
+            this.txtPwd.Location = new System.Drawing.Point(248, 93);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(199, 25);
             this.txtPwd.TabIndex = 3;
             // 
             // logbtn
             // 
-            this.logbtn.Location = new System.Drawing.Point(80, 193);
+            this.logbtn.Location = new System.Drawing.Point(156, 323);
             this.logbtn.Name = "logbtn";
             this.logbtn.Size = new System.Drawing.Size(75, 23);
             this.logbtn.TabIndex = 4;
@@ -80,19 +84,46 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(177, 193);
+            this.btnRegister.Location = new System.Drawing.Point(367, 323);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(102, 23);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "注册用户";
             this.btnRegister.UseVisualStyleBackColor = true;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(161, 144);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(67, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "验证码：";
+            // 
+            // txtValidCode
+            // 
+            this.txtValidCode.Location = new System.Drawing.Point(248, 144);
+            this.txtValidCode.Name = "txtValidCode";
+            this.txtValidCode.Size = new System.Drawing.Size(199, 25);
+            this.txtValidCode.TabIndex = 7;
+            // 
+            // picValidCode
+            // 
+            this.picValidCode.Location = new System.Drawing.Point(248, 203);
+            this.picValidCode.Name = "picValidCode";
+            this.picValidCode.Size = new System.Drawing.Size(189, 50);
+            this.picValidCode.TabIndex = 8;
+            this.picValidCode.TabStop = false;
+            this.picValidCode.Click += new System.EventHandler(this.picValidCode_Click);
             // 
             // Formlog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 286);
+            this.ClientSize = new System.Drawing.Size(577, 398);
+            this.Controls.Add(this.picValidCode);
+            this.Controls.Add(this.txtValidCode);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.logbtn);
             this.Controls.Add(this.txtPwd);
@@ -101,7 +132,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Formlog";
             this.Text = "登陆系统";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Formlog_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picValidCode)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,6 +147,9 @@
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Button logbtn;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtValidCode;
+        private System.Windows.Forms.PictureBox picValidCode;
     }
 }
 

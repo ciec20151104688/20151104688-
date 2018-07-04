@@ -19,6 +19,7 @@ namespace _20151104688刘宇轩
             InitializeComponent();
         }
 
+
         private void btnregisterok_Click(object sender, EventArgs e)
         {
             Formlog frmlogin = new Formlog();
@@ -55,6 +56,11 @@ namespace _20151104688刘宇轩
             {
                 this.Close();
             }
+        }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
         }
 
        
