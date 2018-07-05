@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("张三");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("李四");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("王五");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("赵7");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode4,
-            treeNode5});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("张三");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("李四");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode13,
+            treeNode14});
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("王五");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("赵7");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode16,
+            treeNode17});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,11 +55,14 @@
             this.photo = new System.Windows.Forms.PictureBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.botton3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.当前空余车库 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
@@ -103,21 +106,21 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 123);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "zhangsan";
-            treeNode1.Text = "张三";
-            treeNode2.Name = "lisi";
-            treeNode2.Text = "李四";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "一层业主";
-            treeNode4.Name = "wangwu";
-            treeNode4.Text = "王五";
-            treeNode5.Name = "zhaoqi";
-            treeNode5.Text = "赵7";
-            treeNode6.Name = "节点4";
-            treeNode6.Text = "二层业主";
+            treeNode13.Name = "zhangsan";
+            treeNode13.Text = "张三";
+            treeNode14.Name = "lisi";
+            treeNode14.Text = "李四";
+            treeNode15.Name = "节点0";
+            treeNode15.Text = "一层业主";
+            treeNode16.Name = "wangwu";
+            treeNode16.Text = "王五";
+            treeNode17.Name = "zhaoqi";
+            treeNode17.Text = "赵7";
+            treeNode18.Name = "节点4";
+            treeNode18.Text = "二层业主";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode6});
+            treeNode15,
+            treeNode18});
             this.treeView1.Size = new System.Drawing.Size(121, 112);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
@@ -247,44 +250,12 @@
             this.tabControl1.Size = new System.Drawing.Size(937, 464);
             this.tabControl1.TabIndex = 3;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 36);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(0, 15);
-            this.label18.TabIndex = 2;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(91, 36);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(0, 15);
-            this.label19.TabIndex = 3;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(16, 323);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(128, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "登记车主信息";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(224, 323);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button3);
+            this.tabPage2.Controls.Add(this.textBox1);
+            this.tabPage2.Controls.Add(this.label12);
+            this.tabPage2.Controls.Add(this.当前空余车库);
+            this.tabPage2.Controls.Add(this.botton3);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.label19);
             this.tabPage2.Controls.Add(this.label18);
@@ -296,11 +267,71 @@
             this.tabPage2.Text = "车辆登记";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // botton3
+            // 
+            this.botton3.Location = new System.Drawing.Point(412, 361);
+            this.botton3.Name = "botton3";
+            this.botton3.Size = new System.Drawing.Size(75, 23);
+            this.botton3.TabIndex = 5;
+            this.botton3.Text = "登出";
+            this.botton3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(16, 238);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(128, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "登记车主信息";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(91, 36);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 15);
+            this.label19.TabIndex = 3;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 36);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(0, 15);
+            this.label18.TabIndex = 2;
+            // 
+            // 当前空余车库
+            // 
+            this.当前空余车库.AutoSize = true;
+            this.当前空余车库.Location = new System.Drawing.Point(41, 137);
+            this.当前空余车库.Name = "当前空余车库";
+            this.当前空余车库.Size = new System.Drawing.Size(112, 15);
+            this.当前空余车库.TabIndex = 6;
+            this.当前空余车库.Text = "当前空余车库：";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(35, 51);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(217, 15);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "欢迎使用停车场登陆系统！！！";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(182, 134);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 25);
+            this.textBox1.TabIndex = 8;
+            // 
             // Formmain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(423, 525);
+            this.ClientSize = new System.Drawing.Size(545, 525);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.treeView1);
@@ -340,9 +371,12 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button botton3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label 当前空余车库;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

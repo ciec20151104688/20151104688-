@@ -222,6 +222,7 @@ namespace _20151104688刘宇轩
             InitializeComponent();
             pmain = this;
         }
+
         ValidCode validCode = new ValidCode(5, ValidCode.CodeType.Numbers);
         private void logbtn_Click(object sender, EventArgs e)
         {
@@ -240,7 +241,7 @@ namespace _20151104688刘宇轩
             connection_username.Open();
             connection_userpass.Open();
             MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_username);
-            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE username = '" + txtPwd.Text + "'", connection_userpass);
+            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE userpass = '" + txtPwd.Text + "'", connection_userpass);
             MySqlDataReader reader1 = command1.ExecuteReader();
             MySqlDataReader reader2 = command2.ExecuteReader();
             if (this.txtName.Text == "")
@@ -299,6 +300,14 @@ namespace _20151104688刘宇轩
         private void Formlog_Load(object sender, EventArgs e)
         {
             picValidCode.Image = Bitmap.FromStream(validCode.CreateCheckCodeImage());
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Register frmregister = new Register();
+            Formlog frmlogin = new Formlog();
+            this.Hide();
+            frmregister.Show();
         }
     }
 }

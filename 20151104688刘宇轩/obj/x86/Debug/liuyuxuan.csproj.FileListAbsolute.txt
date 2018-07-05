@@ -10,3 +10,5 @@ C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\liuyuxuan.csprojResolveAssemblyReference.cache
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.Register.resources
 C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.Information.resources
+C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.pay.resources
+C:\Users\ASUS123\Desktop\20151104688刘宇轩\20151104688刘宇轩\obj\x86\Debug\_20151104688刘宇轩.money.resources

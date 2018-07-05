@@ -19,7 +19,6 @@ namespace _20151104688刘宇轩
             InitializeComponent();
            
         }
-
         public Formmain(string str)
         {
             InitializeComponent();
@@ -114,15 +113,6 @@ namespace _20151104688刘宇轩
 
         }
 
-        private void toolStripButton1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
         }
@@ -131,6 +121,16 @@ namespace _20151104688刘宇轩
         {
             FreedomCarEnter freecarEnter = new FreedomCarEnter();
             freecarEnter.Show();
+            this.Close();
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 

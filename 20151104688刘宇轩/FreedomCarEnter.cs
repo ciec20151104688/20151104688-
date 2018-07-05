@@ -14,15 +14,6 @@ namespace _20151104688刘宇轩
     public partial class FreedomCarEnter : Form
     {
         public static DataTable dt = new DataTable();
-        MySqlConnection conn;   // mysql连接
-        MySqlDataAdapter myadp; // mysql数据适配器
-        DataSet myds;   // 数据集
-
-
-
-
-        
-
 
         public FreedomCarEnter()
         {
@@ -87,74 +78,39 @@ namespace _20151104688刘宇轩
 
         private void FreedomCarEnter_Load(object sender, EventArgs e)
         {
-            string MyConnectionString;
-            MyConnectionString = "server = localhost; uid = root; pwd = 123456; database = parkinglot";
-            try
-            {
-                conn = new MySqlConnection();   // 实例化数据库连接（instanced）
-                conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
-                conn.Open();   // 打开连接（opened）
-                myadp = new MySqlDataAdapter("select * from carinfor", conn);
-                myds = new DataSet();
-                myadp.Fill(myds, "carinfor");
-                BindingSource bindingSource1 = new BindingSource();
-                bindingSource1.DataSource = myds.Tables["carinfor"];
-                dataGridView1.DataSource = bindingSource1;
-            }
-            catch (MySqlException ex)
-            {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("不能连接到数据库服务器，请联系数据库管理员！"); break;
-                    case 1045:
-                        MessageBox.Show("无效的用户名/密码,请重试！"); break;
-                    case 1049:
-                        MessageBox.Show("数据库不存在，或数据库名错误"); break;
-                    default:
-                        MessageBox.Show(ex.Message); break;
-                }
-            }
+
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string MyConnectionString;
-            MyConnectionString = "server = localhost; uid = root; pwd = 123456; database = parkinglot";
-            try
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            //1、弹出提示框，如果选择“是”，执行以下步骤。
+            DialogResult ds = MessageBox.Show("是否结算停车费？？？", "提示", MessageBoxButtons.OKCancel);
+            if (ds == DialogResult.OK)
             {
-                conn = new MySqlConnection();   // 实例化数据库连接（instanced）
-                conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
-                conn.Open();   // 打开连接（opened）
-                myadp = new MySqlDataAdapter("select * from carinfor", conn);
-                myds = new DataSet();
-                BindingSource bindingSource1 = new BindingSource();
-                dataGridView1.DataSource = bindingSource1;
-                bindingSource1.DataSource = myds.Tables["carinfor"];
-                MySqlCommandBuilder mycb = new MySqlCommandBuilder(myadp);
-                myadp.Update(myds, "insert into parkinglot.carinfor(name,sex)");
-
-
+                pay paid = new pay();
+                paid.Show();
             }
-            catch (MySqlException ex)
+
+            else
             {
-                switch (ex.Number)
-                {
-                    case 0:
-                        MessageBox.Show("不能连接到数据库服务器，请联系数据库管理员！"); break;
-                    case 1045:
-                        MessageBox.Show("无效的用户名/密码,请重试！"); break;
-                    case 1049:
-                        MessageBox.Show("数据库不存在，或数据库名错误"); break;
-                    default:
-                        MessageBox.Show(ex.Message); break;
-                }
+                MessageBox.Show("信息为空");
             }
         }
     }

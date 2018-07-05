@@ -43,6 +43,7 @@ namespace _20151104688刘宇轩
                     {
                         MessageBox.Show("注册成功！");
                         frmlogin.Show();
+                        this.Hide();
                     }
                 }
             }  
@@ -55,6 +56,9 @@ namespace _20151104688刘宇轩
             if (tip == DialogResult.OK)
             {
                 this.Close();
+                Formlog frmlogin = new Formlog();
+                frmlogin.Show();
+
             }
         }
 

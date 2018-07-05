@@ -74,7 +74,7 @@
             // 
             // logbtn
             // 
-            this.logbtn.Location = new System.Drawing.Point(156, 323);
+            this.logbtn.Location = new System.Drawing.Point(281, 289);
             this.logbtn.Name = "logbtn";
             this.logbtn.Size = new System.Drawing.Size(75, 23);
             this.logbtn.TabIndex = 4;
@@ -84,12 +84,13 @@
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(367, 323);
+            this.btnRegister.Location = new System.Drawing.Point(254, 337);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(102, 23);
             this.btnRegister.TabIndex = 5;
             this.btnRegister.Text = "注册用户";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label3
             // 
