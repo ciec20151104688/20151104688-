@@ -14,6 +14,8 @@ namespace _20151104688刘宇轩
     {
         DataGridView dataGridView1;
         public static DataTable dt = new DataTable();
+        DateTime arrival = DateTime.Now;
+
         public Information()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace _20151104688刘宇轩
                 dr["Sex"] = sex.Text;
                 dr["Age"] = age.Text;
                 dr["Num"] = unm.Text;
+                dr["time"] = time.Text;
                 FreedomCarEnter.dt.Rows.Add(dr);
                 dataGridView1.DataSource = FreedomCarEnter.dt;
 
@@ -81,6 +84,16 @@ namespace _20151104688刘宇轩
         private void Information_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void time_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            time.Text = Convert.ToString(arrival);
         }
     }
 }

@@ -101,11 +101,7 @@ namespace _20151104688刘宇轩
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            this.text_admin_name.ReadOnly = false;
-            this.text_admin_tel.ReadOnly = false;
-            this.text_admin_id.ReadOnly = false;
-            this.text_admin_password.ReadOnly = false;
-            this.text_admin_password2.ReadOnly = false;
+           
         }
 
         private void label13_Click(object sender, EventArgs e)

@@ -13,8 +13,6 @@ namespace _20151104688刘宇轩
 {
     public partial class FreedomCarEnter : Form
     {
-        TimeSpan TimeCount = new TimeSpan();
-        System.DateTime TimeNow = new DateTime();
         public static DataTable dt = new DataTable();
         MySqlConnection conn;   // mysql连接
         MySqlDataAdapter myadp; // mysql数据适配器
@@ -33,31 +31,26 @@ namespace _20151104688刘宇轩
             DataColumn sex = new DataColumn("sex");
             DataColumn age = new DataColumn("age");
             DataColumn num = new DataColumn("num");
-            DataColumn Where = new DataColumn("Where");            // DataColumn colInterest = new DataColumn("colInterest");
+            DataColumn time = new DataColumn("time");       // DataColumn colInterest = new DataColumn("colInterest");
             dt.Columns.Add(name);
             dt.Columns.Add(sex);
             dt.Columns.Add(age);
             dt.Columns.Add(num);
+            dt.Columns.Add(time);
         }
 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            timer.Start();
-            TimeNow = DateTime.Now;
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
-            TimeCount = DateTime.Now - TimeNow;
-            timeshow.Text = string.Format("{0:00}:{1:00}:{2:00}", TimeCount.Hours, TimeCount.Minutes, TimeCount.Seconds);
         }
 
         private void timestop_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            pictureBox1.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -102,9 +95,6 @@ namespace _20151104688刘宇轩
                 conn.ConnectionString = MyConnectionString;   // 配置连接（configured）
                 conn.Open();   // 打开连接（opened）
                 myadp = new MySqlDataAdapter("select * from carinfor", conn);
-
-
-
                 myds = new DataSet();
                 myadp.Fill(myds, "carinfor");
                 BindingSource bindingSource1 = new BindingSource();

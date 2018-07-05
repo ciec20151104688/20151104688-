@@ -119,351 +119,103 @@ namespace _20151104688刘宇轩
                 {
                     for (int j = 0; j < destBmp.Height; j++)
                     {
-
-
-
                         double dx = 0;
-
-
-
                         dx = bXDir ? (PI2 * (double)j) / dBaseAxisLen : (PI2 * (double)i) / dBaseAxisLen;
-
-
-
                         dx += dPhase;
-
-
-
                         double dy = Math.Sin(dx);
-
                         // 取得当前点的颜色 
-
-
-
                         int nOldX = 0, nOldY = 0;
-
-
-
                         nOldX = bXDir ? i + (int)(dy * dMultValue) : i;
-
-
-
                         nOldY = bXDir ? j : j + (int)(dy * dMultValue);
-
                         System.Drawing.Color color = srcBmp.GetPixel(i, j);
-
-
-
                         if (nOldX >= 0 && nOldX < destBmp.Width
-
-
-
                          && nOldY >= 0 && nOldY < destBmp.Height)
                         {
-
                             destBmp.SetPixel(nOldX, nOldY, color);
-
-
-
                         }
-
-
-
                     }
-
-
-
                 }
-
-
                 return destBmp;
-
             }
-
-
-
             #endregion
-
-
-
             #region Public Methods
-
-
-
             public Stream CreateCheckCodeImage()
             {
-
                 string checkCode;
-
-
-
                 switch (_codetype)
                 {
-
-
-
                     case CodeType.Alphas:
-
-
-
                         checkCode = GenerateAlphas();
-
-
-
                         break;
-
-
-
                     case CodeType.Numbers:
-
-
-
                         checkCode = GenerateNumbers();
-
-
-
                         break;
-
-
-
                     case CodeType.Characters:
-
-
-
                         checkCode = GenerateCharacters();
-
-
-
                         break;
-
-
-
                     default:
-
-
-
                         checkCode = GenerateAlphas();
-
-
-
                         break;
-
-
-
                 }
-
-
-
                 this._checkCode = checkCode;
-
-
-
                 MemoryStream ms = null;
-
-
-
                 // 
-
-
-
                 if (checkCode == null || checkCode.Trim() == String.Empty)
-
-
-
                     return null;
 
-
-
                 Bitmap image = new System.Drawing.Bitmap((int)Math.Ceiling((checkCode.Length * _jianju)), (int)_height);
-
-
-
                 Graphics g = Graphics.FromImage(image);
-
-
-
                 try
                 {
-
-
-
                     Random random = new Random();
-
-
-
                     g.Clear(Color.White);
-
-
-
                     // 画图片的背景噪音线 
-
-
-
                     for (int i = 0; i < 18; i++)
                     {
-
-
-
                         int x1 = random.Next(image.Width);
-
-
-
                         int x2 = random.Next(image.Width);
-
-
-
                         int y1 = random.Next(image.Height);
-
-
-
                         int y2 = random.Next(image.Height);
-
-
-
                         g.DrawLine(new Pen(Color.FromArgb(random.Next()), 1), x1, y1, x2, y2);
-
-
-
                     }
-
-
-
                     Font font = new System.Drawing.Font("Times New Roman", 14, System.Drawing.FontStyle.Bold);
-
-
-
                     LinearGradientBrush brush = new LinearGradientBrush(new Rectangle(0, 0, image.Width, image.Height), Color.Blue, Color.DarkRed, 1.2f, true);
-
-
-
                     if (_codetype != CodeType.Words)
                     {
-
-
-
                         for (int i = 0; i < checkCode.Length; i++)
                         {
-
-
-
                             g.DrawString(checkCode.Substring(i, 1), font, brush, 2 + i * _jianju, 1);
-
-
-
                         }
-
-
-
                     }
-
                     else
                     {
-
-
-
                         g.DrawString(checkCode, font, brush, 2, 2);
-
-
-
                     }
-
-
-
                     // 画图片的前景噪音点 
-
-
-
                     for (int i = 0; i < 150; i++)
                     {
-
-
-
                         int x = random.Next(image.Width);
-
-
-
                         int y = random.Next(image.Height);
-
-
-
                         image.SetPixel(x, y, Color.FromArgb(random.Next()));
-
-
-
                     }
-
-
-
                     // 画图片的波形滤镜效果 
-
-
-
                     if (_codetype != CodeType.Words)
                     {
-
-
-
                         image = TwistImage(image, true, 3, 1);
-
-
-
                     }
-
-
-
                     // 画图片的边框线 
-
-
-
                     g.DrawRectangle(new Pen(Color.Silver), 0, 0, image.Width - 1, image.Height - 1);
-
-
-
-
-
-
-
                     ms = new System.IO.MemoryStream();
-
-
-
                     image.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
-
-
-
                 }
-
-
-
                 finally
                 {
-
-
-
                     g.Dispose();
-
-
-
                     image.Dispose();
-
-
-
                 }
-
-
-
                 return ms;
-
-
-
             }
-
-
-
             #endregion
-
-
-
         }
         public Formlog()
         {
@@ -476,29 +228,10 @@ namespace _20151104688刘宇轩
             if (!this.txtValidCode.Text.Equals(validCode.CheckCode))//验证是否输入正确
             {
 
-
-
                 MessageBox.Show(" 请输入正确的验证码!", this.Text);
-
-
-
                 this.txtValidCode.Focus();
-
                 this.txtValidCode.Text = "";
-
-
-
                 return;
-
-
-
-            }
-
-            else
-            {
-
-                MessageBox.Show("成功！");
-
             }
             {
             string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
@@ -507,7 +240,7 @@ namespace _20151104688刘宇轩
             connection_username.Open();
             connection_userpass.Open();
             MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_username);
-            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE userpass = '" + txtPwd.Text + "'", connection_userpass);
+            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE username = '" + txtPwd.Text + "'", connection_userpass);
             MySqlDataReader reader1 = command1.ExecuteReader();
             MySqlDataReader reader2 = command2.ExecuteReader();
             if (this.txtName.Text == "")
