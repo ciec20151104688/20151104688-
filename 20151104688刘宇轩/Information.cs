@@ -14,7 +14,8 @@ namespace _20151104688刘宇轩
     {
         DataGridView dataGridView1;
         public static DataTable dt = new DataTable();
-        DateTime arrival = DateTime.Now;
+        public static DateTime arrival = DateTime.Now;
+        DateTime leave = DateTime.Now;
 
         public Information()
         {

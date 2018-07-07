@@ -32,7 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.spantime = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -68,23 +68,24 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(12, 47);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 15);
+            this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 3;
-            this.label1.Text = "您需支付：";
+            this.label1.Text = "您停车时长为：";
             // 
-            // textBox1
+            // spantime
             // 
-            this.textBox1.Location = new System.Drawing.Point(116, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 25);
-            this.textBox1.TabIndex = 4;
+            this.spantime.Location = new System.Drawing.Point(121, 37);
+            this.spantime.Name = "spantime";
+            this.spantime.Size = new System.Drawing.Size(146, 25);
+            this.spantime.TabIndex = 4;
+            this.spantime.TextChanged += new System.EventHandler(this.span_TextChanged);
             // 
             // pay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 253);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.spantime);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -103,6 +104,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox spantime;
     }
 }

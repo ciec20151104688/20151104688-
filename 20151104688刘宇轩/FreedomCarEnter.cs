@@ -8,16 +8,31 @@ using System.Text;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace _20151104688刘宇轩
 {
     public partial class FreedomCarEnter : Form
     {
         public static DataTable dt = new DataTable();
-        DateTime leave = DateTime.Now;
         public FreedomCarEnter()
         {
             InitializeComponent();
+            new Thread(() =>
+            {
+                while (true)
+                {
+                    try
+                    {
+                       textBox1.BeginInvoke(new MethodInvoker(() =>
+                            textBox1.Text = DateTime.Now.ToString()));
+                    }
+                    catch { }
+                    Thread.Sleep(1000);
+                }
+            }) { IsBackground = true }.Start();
+
+
             DataColumn name = new DataColumn("name");
             DataColumn sex = new DataColumn("sex");
             DataColumn age = new DataColumn("age");
@@ -78,7 +93,6 @@ namespace _20151104688刘宇轩
 
         private void FreedomCarEnter_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -115,7 +129,6 @@ namespace _20151104688刘宇轩
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(leave);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
