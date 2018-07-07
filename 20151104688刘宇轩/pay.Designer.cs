@@ -76,6 +76,7 @@
             // 
             this.spantime.Location = new System.Drawing.Point(121, 37);
             this.spantime.Name = "spantime";
+            this.spantime.ReadOnly = true;
             this.spantime.Size = new System.Drawing.Size(146, 25);
             this.spantime.TabIndex = 4;
             this.spantime.TextChanged += new System.EventHandler(this.span_TextChanged);

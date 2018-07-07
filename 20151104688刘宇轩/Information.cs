@@ -62,10 +62,8 @@ namespace _20151104688刘宇轩
                 dr["time"] = time.Text;
                 FreedomCarEnter.dt.Rows.Add(dr);
                 dataGridView1.DataSource = FreedomCarEnter.dt;
-
-
                 if (
-               command.ExecuteNonQuery() > 0)
+              command.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("成功写入数据库");
                 }

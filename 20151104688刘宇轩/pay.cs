@@ -11,7 +11,7 @@ namespace _20151104688刘宇轩
 {
     public partial class pay : Form
     {
-        string arrival;
+        DateTime a = Information.arrival;
         DateTime c = DateTime.Now;
         public pay()
         {
@@ -25,8 +25,8 @@ namespace _20151104688刘宇轩
 
         private void pay_Load(object sender, EventArgs e)
         {
-           // TimeSpan span =arrival;
-           // spantime.Text = Convert.ToString(span);
+           TimeSpan span =c  -  a;
+           spantime.Text = Convert.ToString(span);
 
         }
 
