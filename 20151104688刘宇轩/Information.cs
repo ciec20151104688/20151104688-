@@ -52,7 +52,7 @@ namespace _20151104688刘宇轩
                 string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 connection.Open();
-                MySqlCommand command = new MySqlCommand("insert into parkinglot.carinfor(name,age,sex,num)values('" + name.Text + "','" + age.Text + "','" + sex.Text + "','" + unm.Text + "')", connection);
+                MySqlCommand command = new MySqlCommand("insert into parkinglot.carinfor(name,age,sex,num，time)values('" + name.Text + "','" + age.Text + "','" + sex.Text + "','" + unm.Text + "','" + time.Text + "')", connection);
                 DataRow dr = FreedomCarEnter.dt.NewRow();
                 dr["name"] = name.Text;
                 dr["Sex"] = sex.Text;

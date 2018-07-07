@@ -103,10 +103,11 @@
             // 
             // sex
             // 
+            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sex.FormattingEnabled = true;
             this.sex.Items.AddRange(new object[] {
-            "男",
-            "女"});
+            "Gentleman",
+            "Lady"});
             this.sex.Location = new System.Drawing.Point(311, 24);
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(121, 23);

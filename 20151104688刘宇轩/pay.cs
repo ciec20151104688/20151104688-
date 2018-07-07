@@ -11,6 +11,8 @@ namespace _20151104688刘宇轩
 {
     public partial class pay : Form
     {
+        DateTime leave = DateTime.Now;
+        DateTime arrival = DateTime.Now;
         public pay()
         {
             InitializeComponent();
@@ -18,9 +20,11 @@ namespace _20151104688刘宇轩
 
         private void button1_Click(object sender, EventArgs e)
         {
-            money doller = new money();
-            doller.Show();
             this.Hide();
+        }
+
+        private void pay_Load(object sender, EventArgs e)
+        {
         }
     }
 }

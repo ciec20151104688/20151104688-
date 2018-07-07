@@ -235,13 +235,13 @@ namespace _20151104688刘宇轩
                 return;
             }
             {
-            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;";
+            string connectionString = "server=localhost;user = root;password=123456;Database=parkinglot;Charset=utf8";
             MySqlConnection connection_username = new MySqlConnection(connectionString);
             MySqlConnection connection_userpass = new MySqlConnection(connectionString);
             connection_username.Open();
             connection_userpass.Open();
             MySqlCommand command1 = new MySqlCommand("SELECT username FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_username);
-            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE userpass = '" + txtPwd.Text + "'", connection_userpass);
+            MySqlCommand command2 = new MySqlCommand("SELECT userpass FROM parkinglot.userinf WHERE username = '" + txtName.Text + "'", connection_userpass);
             MySqlDataReader reader1 = command1.ExecuteReader();
             MySqlDataReader reader2 = command2.ExecuteReader();
             if (this.txtName.Text == "")
