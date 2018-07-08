@@ -110,7 +110,7 @@
             // 
             // picValidCode
             // 
-            this.picValidCode.Location = new System.Drawing.Point(248, 203);
+            this.picValidCode.Location = new System.Drawing.Point(248, 206);
             this.picValidCode.Name = "picValidCode";
             this.picValidCode.Size = new System.Drawing.Size(189, 50);
             this.picValidCode.TabIndex = 8;
@@ -121,6 +121,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::_20151104688刘宇轩.Resource1._2;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(577, 398);
             this.Controls.Add(this.picValidCode);
             this.Controls.Add(this.txtValidCode);

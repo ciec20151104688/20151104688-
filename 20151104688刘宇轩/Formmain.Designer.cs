@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("张三");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("李四");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("王五");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("赵7");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
-            treeNode16,
-            treeNode17});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("张三");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("李四");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("一层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode8});
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("王五");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("赵7");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("二层业主", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tname = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,18 +56,18 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label11 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
             this.botton3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sex = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.age = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label11 = new System.Windows.Forms.Label();
+            this.num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photo)).BeginInit();
@@ -112,21 +112,21 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(12, 123);
             this.treeView1.Name = "treeView1";
-            treeNode13.Name = "zhangsan";
-            treeNode13.Text = "张三";
-            treeNode14.Name = "lisi";
-            treeNode14.Text = "李四";
-            treeNode15.Name = "节点0";
-            treeNode15.Text = "一层业主";
-            treeNode16.Name = "wangwu";
-            treeNode16.Text = "王五";
-            treeNode17.Name = "zhaoqi";
-            treeNode17.Text = "赵7";
-            treeNode18.Name = "节点4";
-            treeNode18.Text = "二层业主";
+            treeNode7.Name = "zhangsan";
+            treeNode7.Text = "张三";
+            treeNode8.Name = "lisi";
+            treeNode8.Text = "李四";
+            treeNode9.Name = "节点0";
+            treeNode9.Text = "一层业主";
+            treeNode10.Name = "wangwu";
+            treeNode10.Text = "王五";
+            treeNode11.Name = "zhaoqi";
+            treeNode11.Text = "赵7";
+            treeNode12.Name = "节点4";
+            treeNode12.Text = "二层业主";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode15,
-            treeNode18});
+            treeNode9,
+            treeNode12});
             this.treeView1.Size = new System.Drawing.Size(121, 112);
             this.treeView1.TabIndex = 1;
             this.treeView1.Visible = false;
@@ -273,6 +273,31 @@
             this.tabPage2.Text = "车辆登记";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(42, 51);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 15);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "停车记录：";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.name,
+            this.sex,
+            this.age,
+            this.num,
+            this.time});
+            this.dataGridView1.Location = new System.Drawing.Point(18, 69);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(566, 152);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -317,57 +342,35 @@
             this.label18.Size = new System.Drawing.Size(0, 15);
             this.label18.TabIndex = 2;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.name,
-            this.age,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(18, 69);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(566, 152);
-            this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
-            // 
             // name
             // 
             this.name.DataPropertyName = "name";
             this.name.HeaderText = "姓名";
             this.name.Name = "name";
             // 
+            // sex
+            // 
+            this.sex.DataPropertyName = "sex";
+            this.sex.HeaderText = "性别";
+            this.sex.Name = "sex";
+            // 
             // age
             // 
             this.age.DataPropertyName = "age";
-            this.age.HeaderText = "性别";
+            this.age.HeaderText = "年龄";
             this.age.Name = "age";
             // 
-            // Column3
+            // num
             // 
-            this.Column3.HeaderText = "年龄";
-            this.Column3.Name = "Column3";
+            this.num.DataPropertyName = "num";
+            this.num.HeaderText = "停车编号";
+            this.num.Name = "num";
             // 
-            // Column4
+            // time
             // 
-            this.Column4.HeaderText = "停车编号";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "停入时间";
-            this.Column5.Name = "Column5";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(42, 51);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(82, 15);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "停车记录：";
+            this.time.DataPropertyName = "time";
+            this.time.HeaderText = "停入时间";
+            this.time.Name = "time";
             // 
             // Formmain
             // 
@@ -420,11 +423,11 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn age;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sex;
+        private System.Windows.Forms.DataGridViewTextBoxColumn age;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn time;
     }
 }

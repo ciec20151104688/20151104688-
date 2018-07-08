@@ -26,13 +26,16 @@ namespace _20151104688刘宇轩
         private void pay_Load(object sender, EventArgs e)
         {
            TimeSpan span =c  -  a;
-           spantime.Text = Convert.ToString(span);
-
         }
 
         private void span_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Visible = true;
         }
 
         
